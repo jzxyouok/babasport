@@ -84,12 +84,8 @@ public class ConnectionPool {
 				e.printStackTrace();
 			}
 		}
-		print();
 	}
 
-	private void print() {
-		System.out.println("数据库连接池数量:" + connectionPool.size());
-	}
 
 	public Connection getConnection() {
 		Connection con = null;
@@ -110,7 +106,6 @@ public class ConnectionPool {
 		}
 		System.out.println("已经分配的连接数:" + size);
 		
-		print();
 		return con;
 	}
 
@@ -130,7 +125,6 @@ public class ConnectionPool {
 				--size;
 			}
 		}
-		print();
 	}
 
 }
